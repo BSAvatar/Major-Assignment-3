@@ -8,6 +8,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: $primary-color;
+  font-size: 40px;
+  padding: 30px;
 }
 
 header {
@@ -33,7 +35,9 @@ header {
         margin-right: 20px;
   
         a {
-          color: #fff;
+          color: #fcc100d3;
+          font-size: 40px;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
           text-decoration: none;
   
           &:hover {
@@ -86,6 +90,8 @@ section:nth-child(even) {
 
 p {
     color: #fff;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
 section {
