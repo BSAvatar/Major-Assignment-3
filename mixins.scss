@@ -1,3 +1,4 @@
+//makkes the entire website responsive
 @mixin media-query($size) {
     @if $size == small {
       @media only screen and (max-width: 576px) {
@@ -14,7 +15,7 @@
     }
   }
   
-  @mixin button-styles($bg-color, $text-color) {
+  @mixin button-styles($bg-color, $text-color) {  //defines the color and background for button elements
     background-color: $bg-color;
     color: $text-color;
     border: none;
@@ -28,7 +29,7 @@
     }
   }
 
-
+//Makes the header resposnsive 
   @mixin responsive-font-size($min-font-size, $max-font-size, $min-width, $max-width) {
     font-size: $min-font-size;
   
