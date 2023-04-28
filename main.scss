@@ -2,26 +2,31 @@
 @import "mixins";
 
 body {
+  margin: 0; /* remove default margin */
+  padding: 0; /* remove default padding */
   font-family: Arial, sans-serif;
   background-color: $secondary-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: $primary-color;
-  font-size: 40px;
+  font-size: 80px;
   padding: 30px;
+  @include responsive-font-size(32px, 48px, 768, 1200);
 }
+
 
 header {
     background-color: $background-color;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    position: fixed;
+    padding: 0px;
+    position:relative;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
   }
   
   nav {
@@ -36,7 +41,7 @@ header {
   
         a {
           color: #fcc100d3;
-          font-size: 40px;
+          font-size: 30px;
           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
           text-decoration: none;
   
@@ -109,28 +114,6 @@ section {
     }
   }
 
-.search-bar {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  
-    input[type="text"] {
-      padding: 10px;
-      border: 1px solid $primary-color;
-      border-radius: 5px 0 0 5px;
-      font-size: 16px;
-    }
-  
-    button[type="submit"] {
-      padding: 10px;
-      background-color: $primary-color;
-      color: #fff;
-      border: none;
-      border-radius: 0 5px 5px 0;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  }
 
 section {
   margin: 20px 0;
@@ -148,6 +131,7 @@ section {
   }
 }
 
+/*Responsive Design*/
 @media only screen and (max-width: 576px) {
   section {
     .section-image {
