@@ -1,13 +1,15 @@
 @import "variables";
 @import "mixins";
 
+//Styling the body
 body {
-  margin: 0; /* remove default margin */
-  padding: 0; /* remove default padding */
+  margin: 0; 
+  padding: 0; 
   font-family: Arial, sans-serif;
   background-color: $secondary-color;
 }
 
+//Styling the headings
 h1, h2, h3, h4, h5, h6 {
   color: $primary-color;
   font-size: 80px;
@@ -15,18 +17,30 @@ h1, h2, h3, h4, h5, h6 {
   @include responsive-font-size(32px, 48px, 768, 1200);
 }
 
-
+//Styling the logo
+.logo {
+    max-height: 100%;
+    max-width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+//Styling the header
 header {
     background-color: $background-color;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px;
-    position:relative;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1;
+    height: 100px;
+    overflow: hidden; 
+    padding: 20px;
+    margin-bottom:20px;
+    text-align: left;
   }
   
   nav {
@@ -53,7 +67,7 @@ header {
     }
   }
 
-
+//creates alternating pattern of the webstie
 section:nth-child(even) {
     display: flex;
     flex-direction: row-reverse;
@@ -84,6 +98,7 @@ section:nth-child(even) {
     }
   }
 
+  //adds style to the imaging 
 .section-image {
   max-width: 100%;
   width: 400px;
@@ -93,6 +108,7 @@ section:nth-child(even) {
   border-radius: 10px;
 }
 
+//styles the paragraphs
 p {
     color: #fff;
     font-size: large;
@@ -114,22 +130,6 @@ section {
     }
   }
 
-
-section {
-  margin: 20px 0;
-
-  h2 {
-    margin-bottom: 10px;
-  }
-
-  p {
-    line-height: 1.5;
-  }
-
-  .button {
-    @include button-styles($primary-color, #fff);
-  }
-}
 
 /*Responsive Design*/
 @media only screen and (max-width: 576px) {
